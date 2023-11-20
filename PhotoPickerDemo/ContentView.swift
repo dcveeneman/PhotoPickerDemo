@@ -30,7 +30,7 @@ struct ContentView: View {
                     .frame(width: 300, height: 300)
             }
         }
-        .onChange(of: selectedPhoto) { result in
+        .onChange(of: selectedPhoto) { 
             Task {
                 do {
                     if let data = try await selectedPhoto?.loadTransferable(type: Data.self) {
